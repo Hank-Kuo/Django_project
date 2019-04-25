@@ -1,0 +1,435 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fuel Serve Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free web designs  for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />  
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet"> 			<!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!-- //fonts -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"> </script>	
+<script src="js/bootstrap.js"></script>
+    <meta name="Generator" content="EditPlus" />
+<meta name="Author" content="男丁格爾's 脫殼玩" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>問與答 Q&A</title>
+<style type="text/css">
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#qaContent {
+	width: 500px;
+}
+#qaContent h3 {
+	width: 500px;
+	height: 22px;
+	text-indent: -9999px;
+}
+#qaContent h3.qa_group_1 {
+	background: url(qa_group_1.gif) no-repeat;
+}
+#qaContent h3.qa_group_2 {
+	background: url(qa_group_2.gif) no-repeat;
+}
+#qaContent ul.accordionPart {
+	margin: 10px 10px 50px 30px;
+}
+#qaContent ul.accordionPart li {
+	border-bottom: solid 1px #e3e3e3;
+	padding-bottom: 12px;
+	margin-top: 12px;
+}
+#qaContent ul.accordionPart li .qa_title {
+	background: url(icon_q_a.gif) no-repeat 0px 3px;
+	padding-left: 28px;
+	color: #1186ec;
+	cursor: pointer;
+}
+#qaContent ul.accordionPart li .qa_title_on {
+	text-decoration: underline;
+}
+#qaContent ul.accordionPart li .qa_content {
+	margin: 6px 0 0;
+	background: url(icon_q_a.gif) no-repeat 0px -24px;
+	padding-left: 28px;
+	color: #666;
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+		// 幫 div.qa_title 加上 hover 及 click 事件
+		// 同時把兄弟元素 div.qa_content 隱藏起來
+		$('#qaContent ul.accordionPart li div.qa_title').hover(function(){
+			$(this).addClass('qa_title_on');
+		}, function(){
+			$(this).removeClass('qa_title_on');
+		}).click(function(){
+			// 當點到標題時，若答案是隱藏時則顯示它；反之則隱藏
+			$(this).next('div.qa_content').slideToggle();
+		}).siblings('div.qa_content').hide();
+
+		// 全部展開
+		$('#qaContent .qa_showall').click(function(){
+			$('#qaContent ul.accordionPart li div.qa_content').slideDown();
+			return false;
+		});
+
+		// 全部隱藏
+		$('#qaContent .qa_hideall').click(function(){
+			$('#qaContent ul.accordionPart li div.qa_content').slideUp();
+			return false;
+		});
+		
+		var _q = location.hash;
+		if(_q!=''){
+			$(_q).siblings('div.qa_content').show();
+		}
+	});
+</script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>	 
+<script src="js/menu_jquery.js"></script> <!-- pop-up -->	
+<!-- //js -->
+</head>
+<body>
+	<!-- header-top -->
+	<div class="header-top">
+		<!-- container -->
+		<div class="container">
+			
+			<div class="w3layouts-details">
+				<ul>
+					<li><a href="mailto:@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>alumni@mail.fju.edu.tw</a></li>
+					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(02)-29052211</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //header-top -->
+	<!-- header -->
+	<div class="header">
+		<!-- container -->
+		<div class="container">
+			<div class="header-bottom">
+				<div class="w3ls-logo">
+					<h1><a href="index.html">輔大校友資料庫</a></h1>
+				</div>
+				<div class="header-top-right"><p>校友搜尋(輸入學號或姓名)</P>
+					<form action="#" method="post">
+						<input type="text" name="Search" placeholder="Search" required=""> 
+						<input type="submit" value="">
+						<div class="clearfix"> </div>
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="container">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+						</button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">首頁</a></li>
+							<li><a href="about.html">新增資料</a></li>
+							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服務功能<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="探索專業人才1.html">探索專業人才</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="申請代辦校友證件.html">申請代辦校友證件</a></li>
+									<li><a class="hvr-bounce-to-bottom" href="校園統計數據.html">校園統計數據</a></li>
+								</ul>
+							</li>	 
+							
+							<li><a href="常見問題.html">常見問題</a></li>
+                            <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下載專區<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="輔仁大學校友資料庫使用單位申請表 .doc">使用單位申請表</a></li>
+                                    
+									<li><a class="hvr-bounce-to-bottom" href="校友資料庫使用手冊.PDF" target="_blank">校友資料庫校友資料庫使用手冊</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="校友資料庫系統_畢業生更新步驟.doc">畢業生離校更新步驟說明</a></li>
+								</ul>
+							</li>	 
+                            
+                            
+							<li><a href="給本站打打氣.html">給本站打打氣</a></li>
+                            <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相關連結<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="http://www.pro.fju.edu.tw/services03.asp"target="_blank">贊助母校</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="http://questionary.dsa.fju.edu.tw/gradsurvey/"target="_blank">畢業生流向專區</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="http://www.academic.fju.edu.tw/#&panel1-1" target="_blank">輔大教務處註冊組</a></li>
+                                    </ul></li>
+							
+							<li></li>
+                            <li >
+								<div id="loginContainer"><a href="#" id="loginButton"><span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login</span></a>
+									<div id="loginBox">      
+										<form id="loginForm" action="#" method="post">
+											<fieldset id="body">
+												<fieldset>
+                                                    <p><b><font color=#00CACA>管理者登入</font></b></p>
+													<label for="email">帳號</label>
+													<input type="text" name="email" id="email" required="">
+												</fieldset>
+												<fieldset>
+													<label for="password">密碼</label>
+													<input type="password" name="password" id="password" required="">
+												</fieldset>
+												<input type="submit" id="login" value="Sign in">
+												<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+											</fieldset>
+											<span><a href="#">Forgot your password?</a></span>
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>	
+						<div class="clearfix"> </div>
+					</div>	
+				</nav>	
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+	<div class="about">
+		<div class="aboutw3-agileinfo">
+			<!-- container --><p>&nbsp;;</p>
+			<div class="container">
+				<h2 class="agileits-title">常見問題</h2>
+			</div>
+			<!-- //container -->
+		</div>
+		
+		<!-- about-bottom -->
+		<div class="about-bottom">
+			<!-- container -->
+			
+			<div class="container">
+			   <div id="qaContent">
+	<a href="#" class="qa_showall">全部展開</a> | <a href="#" class="qa_hideall">全部隱藏</a>
+	<h3 class="qa_group_2">退貨相關問題</h3>
+	<ul class="accordionPart">
+		<li>
+			<div id="q2" class="qa_title">問題 1 各系所權限為何？ 有何功能可以使用？</div>
+			<div class="qa_content">
+				<center><img src="images/權限.gif"></center></P>
+● 目前功能
+<table align=center >
+ <tr align=center>
+    <td>
+	  <br><img src="images/某屆名單.gif" border=0>&nbsp;<br>輔助系所查詢與列印名單
+	</td>
+	<td>
+	  <br><img src="images/系友活動.gif" border=0>&nbsp;<br>輔助查詢舉辦系友活動條件
+	</td>	
+    <td>
+	  <br><img src="images/進階查詢.gif" border=0>&nbsp;<br>多重查詢條件與邏輯設定
+	</td>
+	<td>
+	 <img src="images/專業人才.gif" border=0>&nbsp;<br>輔助查詢專業人才
+	</td>
+  </tr>
+  <tr align=center>        
+    <td>
+	  <br><img src="images/線上報名.gif" border=0>&nbsp;<br>系所可於本系統內舉辦線上報名
+	</td>
+	<td>
+	  <img src="images/統計報表.gif" border=0>&nbsp;<br>即時統計報表分析
+	</td>		  
+	<td>
+	 <img src="images/寄發全校信件.gif" border=0>&nbsp;<br>輔助系所寄發信件
+	</td>
+	<td>
+	  <br><img src="images/代辦校友證件.gif" border=0>&nbsp;<br>協助校友網路代辦證件
+	</td>		
+  </tr>
+  <tr align=center>
+    <td>
+	  <img src="images/新增資料審核.gif" border=0>&nbsp;<br>新增資料審核手續
+	</td>
+	<td>
+	 <img src="images/查看申請人數.gif" border=0>&nbsp;<br>輔助申請密碼手續
+	</td>	
+	<td>
+	  <br><img src="images/申請聯絡人數.gif" border=0>&nbsp;<br>輔助申請聯絡校友手續
+	</td>	    
+	<td>
+	  <img src="images/自設條件.gif" border=0>&nbsp;<br>自設條件
+	</td>
+  </tr> 
+  <tr align=center>
+    <td>
+	  <img src="images/開放離校手續.gif" border=0>&nbsp;<br>設定離校手續流程
+	</td>
+	<td>
+	  &nbsp;
+	</td>	
+	<td>
+	  &nbsp;
+	</td>	    
+	<td>
+	  &nbsp;
+	</td>
+  </tr> 
+ </table>
+			</div>
+		</li>
+		<li>
+			<div id="q3" class="qa_title">問題 2 為何需要向系統申請密碼？ 及填寫出生年月日<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;與電子郵件信箱</div>
+			<div class="qa_content">
+				因為該校友並無「身份證字號」及「密碼」，系統為安全起見，需校友向系統管理者申請密碼做為登入安全判斷。也請校友務必將"出生年月日"與"電子郵件信箱"填寫確實，經管理者判斷合格者，將會發送一封密碼信給校友。
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 3 系所資料屆數、入學年資料不正確？</div>
+			<div class="qa_content">
+				由於歷年校友資料逐漸增加，目前已發現在「屆數」與「入學年」出處最多，還煩請校友及各系所秘書多多更正。若有批次作業困擾可洽系統負責人詢問。
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 4 大宗郵件標籤(一般式) 的使用方法？</div>
+			<div class="qa_content">
+				依Step 1. 將查詢結果儲存為大宗郵件標籤(一般式)，如下圖。<br><br>
+<center><img src="images/一般式1.gif"></center><br>
+Step 2. 使用全選[Ctrl+A]，並把字型大小調整成為<font color=red>13</font>(鍵盤輸入13後，按下Enter鍵)，如下圖。<br><br>
+<center><img src="images/一般式2.gif"></center><br>
+Step 3. 在Excel中[檔案]─[版面設定]，並將頁面大小設定邊界<font color=red>上(0.5cm)、下(0.5cm)、左(0cm)、右(0cm)</font>或<font color=red>上(0.8cm)、下(0cm)、左(0cm)、右(0cm)</font>，以配合HP印表機列印標籤，如下圖。<br><br>
+<center><img src="images/一般式3.gif"></center><br>
+Step 4. 預覽列印時，便可看到每頁整齊的標籤囉，請看下圖。<font color=brown>(第一格標籤將列印共幾筆資料符合搜尋條件)</font><br><br>
+<center><img src="images/一般式4.gif"></center><br>
+若標籤大小難以調整或跳頁有問題 者，建議使用<font color=red>(橫列式)方式</font>列印。</a>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 5 大宗郵件標籤(橫列式) 的使用方法？</div>
+			<div class="qa_content">
+				Step 1. 將查詢結果儲存為大宗郵件標籤(橫列式)，如存至D:\Sample.xls檔。<br>
+Step 2. 利用Word檔案做「合併列印」功能，開啟D:\Sample.xls檔做標籤的合併。<br>
+更詳細「合併列印」的圖例步驟說明 <a href="http://alumni.fju.edu.tw/大宗郵件標籤─橫列式用法.htm">--> More Detail</a>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 6 如何申請同屆同學的聯絡方式？</div>
+			<div class="qa_content">
+				Step 1. 請在網頁中查詢到該校友結果後，於功能中按下[我要聯絡此人]；若<font color=red>沒有</font>此選項，則代表該校友無電子郵件帳號。如下圖。<br>
+<center><img src="images/聯絡1.gif"></center><br>
+Step 2. 為考量個人隱私安全，請填寫申請人<font color=red>姓名</font>與<font color=red>電子信箱</font>，如下圖。待系統管理者確認(七天內)後，將此聯絡信件寄發給該校友，確保校友是否有意願跟您聯絡。資料填寫不確實者，則系統管理者有權取消您的申請。<br>
+<center><img src="images/聯絡2.gif"></center><br>
+附註：若需要<font color=red>整屆</font>同學的通訊錄，請向公共事務室提出申請。<br>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 7 修改資料時一併修改資料庫中存在的相似記錄？</div>
+			<div class="qa_content">
+				在修改個人資料時，系統將自動搜尋資料庫中是否存有相似記錄(如：大學部與研究所都就讀輔大者)。系統並會詢問使用者是否修改此記錄後，一併修改相似記錄。如下圖。<br>
+<center><img src="images/12.png" width=500></center><br>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 8 為何還未收到我的密碼申請信？</div>
+			<div class="qa_content">
+				密碼申請信需要經過資料審核，我們將會儘速處理。由於寄發密碼信乃使用系統程式，所以當信箱有設<font color=red>防火牆、免費信箱</font>時，容易造成無法收到信件。遇此問題 時，歡迎聯絡系統管理者，並說明自己的學號、姓名、系級。<br>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 9 系統無法登入？ 一直顯示帳號密碼錯誤？</div>
+			<div class="qa_content">
+				<font color=red>右上方的帳號、密碼</font>為系統管理者、169個系所所使用登入位置，一般使用者無法使用。 校友收到的密碼是當在查詢自己姓名、學號後，按下[詳細]資料或[修改]資料時，系統會要求輸入此校友的密碼作為安全判斷。<br>
+			</div>
+		</li>
+        <li>
+			<div id="q2" class="qa_title">問題 10 秘書的「查詢小技巧」？</div>
+			<div class="qa_content">
+				<ul>
+  <LI>查詢 <font color=red>系上全部名單</font>─輸入查詢條件僅選擇「部別」既可。範例如下：<br>
+      <img src="images/Q10_1.gif">&nbsp;<img src="images/Q10_2.gif">
+  <LI>查詢 <font color=red>某屆學生名單</font><br>
+  (1)輸入查詢條件可選擇<font color=brown>「屆數」</font>,條件如 31~31,代表查詢起始屆數以及終止屆數皆為第31屆<br>
+  (2)或使用<font color=brown>「部份姓名及部份學號」</font>,條件如48872,代表查詢學號內有48872的學生,既可查詢到該屆(88年入學)學生名單。範例如下：<br>
+      <img src="images/Q10_3.gif">
+</ul>
+			</div>
+		</li>
+	</ul>
+    </div></div></div></div>
+<!-- container -->
+
+
+	<!-- //news-bottom -->
+	<!-- footer -->
+<div class="footer"> 
+		<div class="container">
+			<div class="footer-agileinfo">
+				<div align=center>
+					<div class="w3-agileitsicons">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+							<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+							<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i> </a></li>
+						</ul> 
+					</div>
+					<div class="f-address" >
+						
+						<p class="text">系統開發單位：輔仁大學統計資訊學系</p>
+                        <p class="text">系統維護單位：資訊系統</p>
+                        <p class="text">系統管理單位：公共事務室 電話 29052211</p>
+                        <p class="text">系統開發者：郭鎮源</p>
+                        <p class="text">信箱：alumni@mail.fju.edu.tw</p>
+					</div>
+					
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> 
+	</div>
+
+	<!-- //footer -->
+	<!-- smooth-scrolling-of-move-up --> 
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script> 
+	
+</body>
+</html>
